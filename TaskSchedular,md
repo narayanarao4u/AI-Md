@@ -1,0 +1,17 @@
+You can use the Windows Task Scheduler to create an event that runs "IPSCAN.bat" every hour. Here's the command in Windows Command Prompt (DOS) to do this:
+
+```cmd
+schtasks /create /tn "IPScanTask" /tr "F:\Desktop\IP Scan\IPSCAN.bat" /sc hourly /st 00:00 /f
+```
+
+### Explanation:
+- `/create`: This creates a new scheduled task.
+- `/tn "IPScanTask"`: Assigns the name "IPScanTask" to the scheduled task.
+- `/tr "F:\Desktop\IP Scan\IPSCAN.bat"`: Specifies the path to the batch file to be executed.
+- `/sc hourly`: Sets the task to run every hour.
+- `/st 00:00`: The start time for the task (you can modify the time as needed).
+- `/f`: Forces the creation of the task, overwriting any existing task with the same name.
+
+Run this command in Command Prompt with administrator privileges to successfully schedule the task.
+
+Let me know if you'd like additional help configuring this!

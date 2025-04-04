@@ -1,0 +1,8 @@
+$adminUsername = "ITAdmin"
+$adminPassword = "Itvm#321"
+$executablePath = "trinetra-agent-proxy-sz-final.exe"
+
+$securePassword = ConvertTo-SecureString $adminPassword -AsPlainText -Force
+$credential = New-Object System.Management.Automation.PSCredential ($adminUsername, $securePassword)
+
+Start-Process -FilePath $executablePath -Credential $credential -NoNewWindow
